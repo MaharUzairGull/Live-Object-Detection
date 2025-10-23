@@ -2,11 +2,11 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 DB_USER = "postgres"
-DB_PASSWORD = "3521"
+DB_PASSWORD = "1234"
 DB_HOST = "localhost"
-DB_PORT = "8080"
+DB_PORT = "5432"
 DB_NAME = "postgres"
-DB_SCHEMA = "cvapp"
+DB_SCHEMA = "od"
 
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
@@ -24,3 +24,4 @@ def get_db():
         yield db
     finally:
         db.close()
+
